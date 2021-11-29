@@ -1,0 +1,17 @@
+0,1
+../PTBXL_subjectmap_N_MI.csv
+splt_mode:  train
+../PTBXL_subjectmap_N_MI.csv
+[   0    1    2 ... 9293 9294 9295] [ 9296  9297  9298 ... 11618 11619 11620] [ 9296  9297  9298 ... 11618 11619 11620]
+==11621, Train cases: 9296, Validation cases: 2325, Test cases: 2325==
+
+{'checkpoint': './result/20210404/model/MINANet_title_210404-050718.pth', 'inplanes': 64, 'kernel_size': 32, 'num_blocks': None, 'model_output': 2, 'loss_lambda': 0.7, 'num_layers': None, 'diminution': None, 'n_channel': 4, 'n_dim': None, 'n_split': 40, 'hidden_size': 64, 'dropout': 0.5, 'num_epochs': 5, 'oversample_ratio': 0.0, 'data_path': '../PTBXL_subjectmap_N_MI.csv', 'ext_path': None, 'lead_type': 'original', 'mode': 'train', 'num_workers': 10, 'gpus': [0, 1], 'num_classes': 2, 'comment': 'title_210418-073318', 'lr': 0.0001, 'batch_size': 128, 'gamma': 2.0, 'alpha': 0.5, 'calibration': 1, 'pre_trained': None, 'num_gpus': 2, 'intv_data': <config.SplitData object at 0x7fe12d599eb8>, 'extv_data': None}
+NEW CONFIG SET
+Traceback (most recent call last):
+  File "./main.py", line 72, in <module>
+    main()
+  File "./main.py", line 32, in main
+    model = TwelveLeadsMINANET(config)
+  File "/ubuntu/SY/classification-MINA/models.py", line 222, in __init__
+    self.n_channel = n_channel
+UnboundLocalError: local variable 'n_channel' referenced before assignment
